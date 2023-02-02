@@ -1,0 +1,387 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: initial;
+  box-sizing: border-box;
+}
+
+.olimpiadas {
+  font-size: 32px;
+  font-family: initial;
+  background-color: rgb(3, 199, 206);
+}
+:root {
+  --cor-primaria: rgb(3, 199, 206);
+  --cor-texto-base: #333;
+  --cor-texto-aux: #555;
+  --cor-texto-contrastante: white;
+  --gradiente-verde: linear-gradient(to rigth, var(--cor-primaria));
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  
+  
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+header {
+  background-color:  rgb(3, 199, 206);
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.container-cabecalho{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+article {
+  width: 20rem;
+  margin: 2rem;
+}
+
+
+
+figcaption.dark {
+  color: white
+}
+article:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+section article {
+  border: 1px solid var(--cor-primaria);
+}
+
+img {
+  max-width: 100%;
+}
+
+section article h2 {
+  color: var(--cor-primaria);
+  margin: 10px;
+}
+
+section article p {
+  color: var(--cor-texto-base);
+  margin: 10px;
+}
+
+figcaption {
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--cor-texto-aux);
+  margin: 0px 10px 0px 10px;
+}
+
+footer {
+  background-color: var(--cor-primaria);
+  background: var(-plum);
+  padding: 1.5em 0.5em;
+  text-align: center;
+  color: var(--cor-texto-contrastante);
+}
+
+footer p {
+  font-size: 0.9em;
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.navbar a {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: rgb(3, 199, 206);
+  
+}
+
+li ::marker {
+  list-style-type: none;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px;
+  text-align: start;
+  text-align-last: start;
+}
+
+
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.nav-links a {
+
+  color: white;
+
+}
+
+/* LOGO */
+.logo {
+  font-size: 45px;
+  background-color:rgb(3, 199, 206) ;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  justify-items: center;
+}
+/*
+.menu li:hover {
+  background-color: rgb(3, 199, 206);
+  border-radius: 5px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+*/
+
+
+/* DROPDOWN MENU */
+.services {
+  position: relative;
+}
+.dropdown {
+  background-color: rgb(3, 199, 206);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+  left: 50%;
+  transform: translateX(35%);
+}
+.dropdown li + li {
+  margin-top: 10px;
+}
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+.services:hover .dropdown {
+  display: block;
+}
+
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+
+/* CHECKBOX HACK */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/*HAMBURGER MENU*/
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* botão */
+
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  display: flex;
+}
+
+body{
+  display: table;
+}
+
+/* DARKMODE E LIGHTMODE */
+div.btn-container{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+div.btn-container i{
+  display: inline-block;
+  position: relative;
+  top: -9px;
+}
+
+label {
+  font-size: 13px;
+  color: #424242;
+  font-weight: 500;
+  display: flex;
+}
+
+.btn-color-mode-switch{
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner{
+  margin: 0px;
+  width: 140px;
+  height: 30px;
+  background: #303030;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+  display: block;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+  content: attr(data-on);
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  top: 7px;
+  right: 20px;
+
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+  content: attr(data-off);
+  width: 70px;
+  height: 16px;
+  background: #fff;
+  border-radius: 26px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 6px -2px #111;
+  padding: 5px 0px;
+}
+
+.btn-color-mode-switch > .alert{
+  display: none;
+  background: #FF9800;
+  border: none;
+  color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]{
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: 0px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+  background: #151515;
+  color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+  content: attr(data-on);
+  left: 68px;
+  background: #3a3a3a;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+  content: attr(data-off);
+  right: auto;
+  left: 20px;
+}
+
+
+
+.btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{
+  display: block;
+}
+
+/*mode preview*/
+.dark-preview{
+  background: #3D2C8D;
+}
+
+.dark-preview header {
+  background: #1C0C5B;
+}
+
+.dark-preview h1.logo {
+  background: #1C0C5B;
+}
+
+.dark-preview a {
+  background: #1C0C5B;
+}
+
+.dark-preview footer {
+  background: #1C0C5B;
+}
+
+.dark-preview p {
+  color: white;
+}
+
+.dark-preview figcaption {
+  color: white;
+}
+
+.dark-preview h2 {
+  color: #CAE8D5;
+}
+
+.dark-preview div.btn-container i.fa-sun-o{
+  color: #777;
+}
+ 
+p.by a{
+  text-decoration: none;
+  color:#0d0e0d
+}
+
+.dark-preview p.by a{
+  color: #777;
+}
+
+.white-preview p.by a{
+  color: #000;
+}
+
